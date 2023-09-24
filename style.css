@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nanum+Myeongjo&family=Playfair+Display&family=Poppins:wght@500&family=Prata&family=Ruwudu&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #4d59fb;
+}
+.wrapper{
+    width: 480px;
+    background: #fff;
+    padding: 28px 28px 45px;
+    border-radius: 7px;
+}
+.wrapper header{
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+}
+.wrapper .search{
+    margin: 35px 0 18px;
+     position: relative;
+}
+.search input{
+    height: 53px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 0 42px;
+    font-size: 16px;
+}
+.search input::placeholder{
+    color: #b8b8b8;
+}
+.search input:focus{
+    padding: 0 41px;
+    border: 2px solid #4d59fb;
+}
+.search :where(i,span){
+     position: absolute;
+     top: 50%;
+   transform: translateY(-50%);
+   color: #999;
+}
+.search i{
+    left: 18px;
+    pointer-events: none;
+    font-size: 16px;
+}
+.search input:focus ~ i{
+    color: #4d59fb;
+}
+.search span{
+    right: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    display: none;
+}
+.search input:valid ~ span{
+    display: block;
+}
+.wrapper .info-text{
+    font-size: 13px;
+    color: #9a9a9a;
+    margin: -3px 0 -10px;
+}
+.wrapper.active .info-text{
+    display: none;
+}
+.wrapper ul{
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+.wrapper.active ul{
+    height: 360px;
+    opacity: 1;
+}
+.wrapper ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    padding-bottom: 17px;
+
+    border-bottom: 1px solid #ccc;
+}
+.list span{
+     padding-left: 5px;
+     text-decoration: underline;
+     cursor: pointer;
+}
+ul .content{
+    max-height: 215px;
+    overflow-y: auto;
+}
+ul .content::-webkit-scrollbar{
+    width: 0px;
+}
+ul li:last-child{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border-bottom: 0px;
+}
+ul .word p{
+    font-size: 22px;
+    font-weight: 500;
+}
+ul .word span{
+    font-size: 12px;
+    color: #989898;
+}
+ul .word i{
+    cursor: pointer;
+    font-size: 15px;
+    color: #999;
+}
